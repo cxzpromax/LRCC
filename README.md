@@ -7,10 +7,6 @@ This is a pytorch implementation of the paper: *LRCC: Robust point cloud underst
 The overall framework of the proposed LRCC is shown in the picture below. It consists of a high-order feature generator, a low-rank learner, a curvature compensator, and a cross-source feature fusion module. First, the high-order feature generator is designed to decompose the feature map into multi-granularity representations. Second, the low-rank learner constrains the learned features to provide a more consistent representation. Then, the curvature compensator serves as an additional feature patch to mitigate information loss induced by the low-rank learning strategy. Finally, we concatenate both low-rank and curvature features for downstream tasks.
 ![image width="100" height="100"](Image/framework.png)
 
-## high-order Feature Generator
-Illustration of the high-order feature generator. The green and cyan regions denote the feature map and mask matrix, respectively. Red-boxed points are activated in the current round, while slashed ones were activated in the previous round but not reactivated in the current round. Each subsequent feature map forms a subset of the previous one, making the multi-stage max-pooling process distinct from directly selecting top-ranked values.
-![image width="100" height="100"](Image/high_order_feature.png) 
-
 ## Installation
 
 * The code has been tested on one configuration:
